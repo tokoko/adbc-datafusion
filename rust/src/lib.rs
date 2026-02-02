@@ -1,3 +1,8 @@
+// Copyright (c) 2025 ADBC Drivers Contributors
+//
+// This file has been modified from its original version, which is
+// under the Apache License:
+//
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
 // distributed with this work for additional information
@@ -41,11 +46,12 @@ use arrow_buffer::{OffsetBuffer, ScalarBuffer};
 use arrow_schema::{ArrowError, DataType, Field, SchemaRef};
 
 use adbc_core::{
+    Connection, Database, Driver, Optionable, Statement,
     error::{Error, Result, Status},
     options::{
         InfoCode, ObjectDepth, OptionConnection, OptionDatabase, OptionStatement, OptionValue,
     },
-    schemas, Connection, Database, Driver, Optionable, Statement,
+    schemas,
 };
 
 pub enum Runtime {

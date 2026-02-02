@@ -1,3 +1,8 @@
+# Copyright (c) 2025 ADBC Drivers Contributors
+#
+# This file has been modified from its original version, which is
+# under the Apache License:
+#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -16,26 +21,17 @@
 # under the License.
 
 [package]
-name = "adbc_datafusion"
+name = "adbc-driver-datafusion"
 description = "ADBC driver for Apache DataFusion"
-version.workspace = true
-edition.workspace = true
-rust-version = "1.88.0"                           # datafusion mrsv
-authors.workspace = true
-license.workspace = true
-readme = "README.md"
-documentation = "http://docs.rs/adbc_datafusion/"
-homepage.workspace = true
-repository.workspace = true
-keywords.workspace = true
-categories.workspace = true
+version = "0.1.0"
+edition = "2024"
 
 [dependencies]
-adbc_core.workspace = true
-adbc_ffi = { workspace = true, optional = true }
-arrow-array = "57.2.0"
-arrow-buffer = "57.2.0"
-arrow-schema = "57.2.0"
+adbc_core = "0.22.0"
+adbc_ffi = "0.22.0"
+arrow-array = "57.2"
+arrow-buffer = "57.2"
+arrow-schema = "57.2"
 datafusion = { version = "52.1.0", default-features = false }
 datafusion-substrait = { version = "52.1.0", default-features = false }
 tokio = { version = "1.49", features = ["rt-multi-thread"] }
@@ -46,7 +42,3 @@ arrow-select = "57.2.0"
 
 [lib]
 crate-type = ["lib", "cdylib"]
-
-[features]
-default = []
-ffi = ["dep:adbc_ffi"]
