@@ -1,0 +1,2 @@
+[tags]
+broken_vendor = "DataFusion preserves string_view instead of converting to string"

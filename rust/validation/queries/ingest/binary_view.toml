@@ -1,0 +1,2 @@
+[tags]
+broken_vendor = "DataFusion converts binary_view to binary on read-back"

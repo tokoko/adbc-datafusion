@@ -1,0 +1,2 @@
+[tags]
+broken_vendor = "DataFusion converts fixed_size_binary to binary on read-back"

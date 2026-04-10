@@ -1,0 +1,2 @@
+[tags]
+broken_vendor = "DataFusion normalizes all timezones to UTC"
